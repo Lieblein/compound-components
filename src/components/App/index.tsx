@@ -14,28 +14,60 @@ export default function App() {
                 <DataList
                     items={ [
                         {
-                            title: 'Work Location',
-                            value: <>
-                                Ижевск
-                                <br />
-                                Россия
-                            </>,
+                            title: 'Project Code',
+                            value: '123',
                         },
                         {
-                            title: 'Employment Status',
-                            value: 'Full-time (1 FTE)',
+                            title: 'Financial Model',
+                            value: 'Fixed-Price',
                         },
                         {
-                            title: 'Production Category',
-                            value: 'Production',
+                            title: 'Status',
+                            value: 'Billable Project / In Progress',
                         },
                         {
-                            title: 'Job Function',
-                            value: 'Software Engineering',
+                            title: 'Customer',
+                            value: '123',
                         },
                         {
-                            title: 'Track & Level',
-                            value: 'A3',
+                            className: 'my-data-list-item',
+                            title: 'Planned Start Date',
+                            value: '4 NOV 2024',
+                        },
+                        {
+                            className: 'my-data-list-item',
+                            title: 'Planned End Date',
+                            value: '16 FEB 2025',
+                        },
+                        {
+                            className: 'my-data-list-item',
+                            title: 'End Warranty Date',
+                            value: '28 FEB 2025',
+                        },
+                        {
+                            className: 'my-data-list-item',
+                            title: 'Warranty Obligations Reserve',
+                            value: '3%',
+                        },
+                        {
+                            title: 'Account Manager',
+                            value: <a
+                                href="https://develonica.ru/employee/1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Чичерин Максим
+                            </a>,
+                        },
+                        {
+                            title: 'Project Manager',
+                            value: <a
+                                href="https://develonica.ru/employee/2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Пронин Денис
+                            </a>,
                         },
                     ] }
                 />

@@ -16,6 +16,20 @@ dd {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #09f;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:focus:active {
+    outline: 0;
+    color: #333;
+}
+
 .app {
     margin: 60px;
 }
@@ -23,4 +37,8 @@ dd {
 .title {
     color: #ba4458;
     margin-bottom: 20px;
+}
+
+.my-data-list-item {
+    width: fit-content;
 }

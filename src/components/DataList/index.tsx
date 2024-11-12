@@ -7,6 +7,7 @@ interface IProps {
         className?: string;
         title: React.ReactNode;
         value: React.ReactNode;
+        prefix?: React.ReactNode;
     }>;
 }
 
@@ -16,14 +17,28 @@ export default function DataList(props: Readonly<IProps>) {
     return (
         <dl className='data-list'>
             {
-                items.map(({ className, title, value }) => (
-                    <div className={ `${className ?? ''} data-list__item` }>
-                        <dt className='data-list__title'>
-                            { title }
-                        </dt>
-                        <dd>
-                            { value }
-                        </dd>
+                items.map((
+                    {
+                        className,
+                        title,
+                        value,
+                        prefix,
+                    },
+                    index,
+                ) => (
+                    <div
+                        key={ index }
+                        className={ `${className ?? ''} data-list__item` }
+                    >
+                        { prefix }
+                        <div>
+                            <dt className='data-list__title'>
+                                { title }
+                            </dt>
+                            <dd>
+                                { value }
+                            </dd>
+                        </div>
                     </div>
                 ))
             }

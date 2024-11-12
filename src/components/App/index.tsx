@@ -50,6 +50,10 @@ export default function App() {
                             value: '3%',
                         },
                         {
+                            className: 'my-flex-data-list-item',
+                            prefix: <div className='avatar'>
+                                ЧМ
+                            </div>,
                             title: 'Account Manager',
                             value: <a
                                 href="https://develonica.ru/employee/1"
@@ -60,6 +64,10 @@ export default function App() {
                             </a>,
                         },
                         {
+                            className: 'my-flex-data-list-item',
+                            prefix: <div className='avatar'>
+                                ПД
+                            </div>,
                             title: 'Project Manager',
                             value: <a
                                 href="https://develonica.ru/employee/2"

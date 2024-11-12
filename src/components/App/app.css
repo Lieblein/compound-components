@@ -8,6 +8,14 @@ body {
     background-color: #fafafa;
 }
 
+dl {
+    margin: 0;
+}
+
+dd {
+    margin: 0;
+}
+
 .app {
     margin: 60px;
 }

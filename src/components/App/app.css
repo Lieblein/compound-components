@@ -40,12 +40,9 @@ a:focus:active {
 }
 
 .my-data-list-item {
-    width: fit-content;
-}
-
-.my-flex-data-list-item {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 20px 12px;
 }
 
 .avatar {
@@ -53,11 +50,21 @@ a:focus:active {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    line-height: 1;
-    font-size: 16px;
-    color: #fff;
-    background-color: #ba4458;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
+    border: 2px solid #ececec;
+}
+
+.icon {
+    width: 22px;
+    fill: #999;
+}
+
+.separator {
+    width: 100%;
+    margin: 0;
+    background-color: #ececec;
+    border: none;
+    height: 1px;
 }

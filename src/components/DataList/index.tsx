@@ -8,6 +8,7 @@ interface IProps {
         title: React.ReactNode;
         value: React.ReactNode;
         prefix?: React.ReactNode;
+        suffix?: React.ReactNode;
     }>;
 }
 
@@ -23,6 +24,7 @@ export default function DataList(props: Readonly<IProps>) {
                         title,
                         value,
                         prefix,
+                        suffix,
                     },
                     index,
                 ) => (
@@ -39,6 +41,7 @@ export default function DataList(props: Readonly<IProps>) {
                                 { value }
                             </dd>
                         </div>
+                        { suffix }
                     </div>
                 ))
             }

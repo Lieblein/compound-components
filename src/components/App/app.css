@@ -8,6 +8,28 @@ body {
     background-color: #fafafa;
 }
 
+dl {
+    margin: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #09f;
+}
+
+a:hover,
+a:active,
+a:focus,
+a:focus:active {
+    outline: 0;
+    color: #333;
+}
+
 .app {
     margin: 60px;
 }

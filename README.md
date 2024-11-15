@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
+# React Compound Components Examples
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+|Ветка|Описание|
+|-|-|
+|[simple-datalist](https://github.com/Lieblein/compound-components/tree/simple-datalist)| Запущенный Datalist с кучей props |
+|[datalist](https://github.com/Lieblein/compound-components/tree/datalist)| Compound Component Datalist |
+|[table](https://github.com/Lieblein/compound-components/tree/table)| Compound Component Table с данными в контексте |

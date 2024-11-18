@@ -42,7 +42,8 @@ a:focus:active {
 .my-data-list-item {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 12px;
+    gap: 12px;
+    align-items: center;
 }
 
 .avatar {

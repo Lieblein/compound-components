@@ -2,49 +2,52 @@ import React from 'react';
 
 import './data-list.css';
 
-interface IProps {
-    items: Array<{
-        className?: string;
-        title: React.ReactNode;
-        value: React.ReactNode;
-        prefix?: React.ReactNode;
-        suffix?: React.ReactNode;
-    }>;
+interface IDataListProps {
+    className?: string;
+    children: React.ReactNode;
 }
-
-export default function DataList(props: Readonly<IProps>) {
-    const { items } = props;
-
+function DataList({ className, children }: IDataListProps) {
     return (
-        <dl className='data-list'>
-            {
-                items.map((
-                    {
-                        className,
-                        title,
-                        value,
-                        prefix,
-                        suffix,
-                    },
-                    index,
-                ) => (
-                    <div
-                        key={ index }
-                        className={ `${className ?? ''} data-list__item` }
-                    >
-                        { prefix }
-                        <div>
-                            <dt className='data-list__title'>
-                                { title }
-                            </dt>
-                            <dd>
-                                { value }
-                            </dd>
-                        </div>
-                        { suffix }
-                    </div>
-                ))
-            }
-        </dl>
+        <div className={ `${className ?? ''} data-list` }>
+            { children }
+        </div>
     );
 }
+
+interface IItemProps {
+    className?: string;
+    children: React.ReactNode;
+}
+DataList.Item = function Item({ className, children }: IItemProps) {
+    return (
+        <div className={ `${className ?? ''} data-list__item` }>
+            { children }
+        </div>
+    );
+};
+
+interface ITitleProps {
+    className?: string;
+    children: React.ReactNode;
+}
+DataList.Title = function Title({ className, children }: ITitleProps) {
+    return (
+        <div className={ `${className ?? ''} data-list__title` }>
+            { children }
+        </div>
+    );
+};
+
+interface IValueProps {
+    className?: string;
+    children?: React.ReactNode;
+}
+DataList.Value = function Value({ className, children }: IValueProps) {
+    return (
+        <div className={ className ?? '' }>
+            { children }
+        </div>
+    );
+};
+
+export default DataList;

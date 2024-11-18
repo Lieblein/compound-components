@@ -9,21 +9,20 @@ export default function LevelsTable() {
     return (
         <Table className='levels-table'>
             <thead>
-                <tr>
+                <Table.Row rowIndex={ 0 }>
                     {
                         ['', 'L0', 'L1', 'L2', 'L3', 'L4'].map((title, index) => (
                             <Table.Cell
                                 key={ title }
                                 className='levels-table__cell'
                                 head={ true }
-                                rowIndex={ 0 }
                                 colIndex={ index }
                             >
                                 { title }
                             </Table.Cell>
                         ))
                     }
-                </tr>
+                </Table.Row>
             </thead>
             <tbody>
                 {
@@ -33,10 +32,12 @@ export default function LevelsTable() {
                         'Кострома',
                         'Москва',
                     ].map((city, cityIndex) => (
-                        <tr key={ city }>
+                        <Table.Row
+                            key={ city }
+                            rowIndex={ cityIndex + 1 }
+                        >
                             <Table.Cell
                                 className={ `levels-table__cell ${cityIndex === 0 ? 'levels-table__cell--bold' : ''}` }
-                                rowIndex={ cityIndex + 1 }
                                 colIndex={ 0 }
                             >
                                 { city }
@@ -46,14 +47,13 @@ export default function LevelsTable() {
                                     <Table.Cell
                                         key={ index }
                                         className='levels-table__cell'
-                                        rowIndex={ cityIndex + 1 }
                                         colIndex={ index + 1 }
                                     >
                                         { data }
                                     </Table.Cell>
                                 ))
                             }
-                        </tr>
+                        </Table.Row>
                     ))
                 }
             </tbody>

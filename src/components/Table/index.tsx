@@ -37,22 +37,43 @@ function Table(props: Readonly<IProps>) {
     );
 }
 
-interface ICellProps {
+const RowContext = React.createContext<number>(0);
+interface IRowProps {
     className?: string;
     children: React.ReactNode;
     rowIndex: number;
+}
+Table.Row = function Row(props: IRowProps) {
+    const {
+        className,
+        rowIndex,
+        children,
+    } = props;
+
+    return (
+        <RowContext.Provider value={ rowIndex }>
+            <tr className={ className }>
+                { children }
+            </tr>
+        </RowContext.Provider>
+    );
+};
+
+interface ICellProps {
+    className?: string;
+    children: React.ReactNode;
     colIndex: number;
     head?: true;
 }
 Table.Cell = function Cell(props: ICellProps) {
     const {
         className,
-        rowIndex,
         colIndex,
         head,
         children,
     } = props;
 
+    const rowIndex = React.useContext(RowContext);
     const {
         hoveredCell,
         addHoveredCell,

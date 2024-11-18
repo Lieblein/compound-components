@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Table from '../Table';
+import LevelsTable from '../LevelsTable';
 import './app.css';
 
 export default function App() {
@@ -9,7 +9,7 @@ export default function App() {
             <h1 className='title'>
                 Table
             </h1>
-            <Table />
+            <LevelsTable />
         </div>
     );
 }

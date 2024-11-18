@@ -1,0 +1,13 @@
+.levels-table {
+    &__cell {
+        text-align: right;
+
+        &:first-child {
+            text-align: left;
+        }
+
+        &--bold {
+            font-weight: bold;
+        }
+    }
+}

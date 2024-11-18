@@ -1,17 +1,15 @@
 import React from 'react';
 
-import Box from '../Box';
+import Table from '../Table';
 import './app.css';
 
 export default function App() {
     return (
         <div className='app'>
             <h1 className='title'>
-                DataList
+                Table
             </h1>
-            <Box>
-                DataList
-            </Box>
+            <Table />
         </div>
     );
 }
